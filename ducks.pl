@@ -14,6 +14,7 @@ male(jakob_duck).
 male(diethelm_duck).
 male(david_duck).
 male(gruben_gustel_duck).
+male(winifred_duck).
 
 female(della_duck).
 female(mathilda_duck).
@@ -31,10 +32,12 @@ eltern(dortel_duck, della_duck).
 
 eltern(diebert_duck, mathilda_duck).
 eltern(diebert_duck, dagobert_duck).
+eltern(diebert_duck, winifred_duck).
 eltern(diebert_duck, dortel_duck).
 eltern(dankrade_duck, mathilda_duck).
 eltern(dankrade_duck, dagobert_duck).
 eltern(dankrade_duck, dortel_duck).
+eltern(dankrade_duck, winifred_duck).
 
 eltern(gruben_gustel_duck, diebert_duck).
 eltern(gruben_gustel_duck, jakob_duck).
