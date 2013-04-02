@@ -1,4 +1,3 @@
-#!/usr/bin/env swipl -s
 male(tick_duck).
 male(trick_duck).
 male(track_duck).
