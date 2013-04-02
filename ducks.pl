@@ -59,9 +59,13 @@ vorfahre(X,Y) :- eltern(X,Y).
 vorfahre(X,Y) :- eltern(X,Z), eltern(Z,Y).
 
 % geschwister X geschwister von Y, Z eltern von X, Z eltern von Y, X != Y
-geschwister(X,Y) :- eltern(Z,X), eltern(Z,Y), X\=Y.
+geschwister(X,Y) :- eltern(Z,X), !, eltern(Z,Y), X\=Y.
 % burder().   X bruder von Y -> X ist male, geschwister(X,Y)
 bruder(X,Y) :- male(X), geschwister(X,Y).
+
+% X vollburder von Y
+vollbruder(X,Y) :- bruder(X,Y), mutter(M,X), mutter(M,Y), vater(V,X), vater(V,Y).
+
 % schwester(). X schwster von Y -> X ist female, geschwister(X,Y)
 schwester(X,Y) :- female(X), geschwister(X,Y).
 % onkel().     X onkel von Y -> X bruder Z, Z eltern Y
